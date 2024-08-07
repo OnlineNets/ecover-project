@@ -1,0 +1,117 @@
+.blackboard {
+    background-color: #191919;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 6vh;
+    scroll-behavior: unset;
+}
+.top-toolbar {
+    height: 10vh;
+    width: 100%;
+    border-bottom: 1px solid #5a5a5a;
+}
+.left-toolbar {
+    width: 100px;
+    height: 100%;
+    border-right: 1px solid #5a5a5a;
+    float: left;
+}
+.main-workboard {
+    float: right;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.myicons {
+    width: 100%;
+    height: 8.73vh;
+    align-items: center;
+    justify-items: center;
+    color: cadetblue;
+    border-bottom: 1px solid #5a5a5a;
+    text-align: center;
+    padding-top: 5px;
+}
+.myicons:hover {
+    background-color: #0e0e0e;
+    cursor: pointer;
+}
+.default-page {
+    background-color: white;
+    width: 400px;
+    height: 600px;
+    z-index: 0;
+}
+.show-extrapage {
+    background-color: #191919;
+    opacity: 0.95;
+    width: 100%;
+    height: 87.3vh;
+    overflow: hidden;
+    position: absolute;
+    right: -100%;
+    transform: translateX(-100%);
+    z-index: 100;
+    transition-duration: 400ms;
+}
+.hidden-extrapage {
+    background-color: #191919;
+    opacity: 0.5;
+    width: 100%;
+    height: 87.3vh;
+    overflow: hidden;
+    position: absolute;
+    right: -100px;
+    transform: translateX(100%);
+    z-index: 100;
+    transition-duration: 400ms;
+}
+.show-text-component {
+    width: 100px;
+    left: -100px;
+    overflow: hidden;
+    position: absolute;
+    transform: translateX(97%);
+    z-index: 999;
+    transition-duration: 400ms;
+    top: 200px;
+}
+.hidden-text-component {
+    width: 100px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    transform: translateX(-100%);
+    z-index: 999;
+    transition-duration: 400ms;
+}
+.show-finalizepage {
+    overflow: auto;
+    width: 400px;
+    height: 87.3vh;
+    background-color: #d6d6d6;
+    position: absolute;
+    right: -400px;
+    transform: translateX(-100%);
+    z-index: 100;
+    transition-duration: 400ms;
+}
+.hidden-finalizepage {
+    width: 400px;
+    height: 87.3vh;
+    background-color: #d6d6d6;
+    position: absolute;
+    right: -400px;
+    transform: translateX(100%);
+    z-index: 100;
+    transition-duration: 400ms;
+}
+
+.default-page{
+    height: 100%;
+    width: 100%;
+}

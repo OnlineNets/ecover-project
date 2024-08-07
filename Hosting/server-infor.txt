@@ -1,0 +1,53 @@
+
+pm2 serve build -spa -s
+
+
+server {
+    listen 80;
+    listen              443 ssl;
+    server_name         abundanceauthority.com;
+    ssl_certificate     abundanceauthority.com.crt;
+    ssl_certificate_key abundanceauthority.com.key;
+    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+
+    location / {
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $http_host;
+        proxy_pass         http://localhost:3000;
+    }
+
+    location /api {
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $http_host;
+        proxy_pass         http://localhost:5000;
+    }
+}
+
+export PATH="/var/lib/mongo:$PATH"
+
+
+    listen 80;
+    listen              443 ssl;
+    server_name         atomicecovers.com;
+    ssl_certificate     atomicecovers.com.crt;
+    ssl_certificate_key atomicecovers.com.key;
+    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+
+    
+
+
+    https://atomicecovers.com/api/auth
+    https://atomicecovers/api/auth
+
+
+    root /root/E-Cover-Project/client/build;
+         /root/E-Cover-Project/client/build
+
+    index index.html index.htm;
+
+
+    proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header Host $host;
+        proxy_pass         http://localhost:3000;

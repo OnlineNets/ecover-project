@@ -1,0 +1,3 @@
+run: npm install
+run: node __getMockupdata.js
+then will create MockupData.js file

@@ -1,0 +1,14 @@
+.save-image{
+    text-align: center;
+    margin: 5px;
+}
+.save-button{
+    border-radius: 5px;
+    color: white;
+    width: fit-content;
+    margin: 5px;
+    padding: 0px 10px;
+}
+.save-button:hover{
+    cursor: pointer;
+}

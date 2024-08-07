@@ -1,0 +1,7 @@
+.env
+node_modules/
+client/node_modules/
+client/.env
+#upload/
+mockupfiles/output_psd.psd
+mockupfiles/result_origin.png
